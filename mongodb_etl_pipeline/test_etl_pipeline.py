@@ -1,46 +1,6 @@
-# import unittest
-# from etl_pipeline import extract_data, transform
-#
-# class TestETL(unittest.TestCase):
-#
-#     def test_extract(self):
-#
-#         data = extract_data('/data/member-data.txt')
-#         self.assertEqual(len(data), 500)
-#
-#     def test_transform(self):
-#         raw_data = [
-#             {
-#                 'FirstName': 'John',
-#                 'LastName': 'Doe',
-#                 'Company': 'Company Inc.',
-#                 'BirthDate': '01051985',
-#                 'Salary': '55000',
-#                 'Address': '123 Elm St',
-#                 'Suburb': 'Elmwood',
-#                 'State': 'CA',
-#                 'Post': '90210',
-#                 'Phone': '123456789',
-#                 'Mobile': '987654321',
-#                 'Email': 'john.doe@example.com'
-#             }
-#         ]
-#
-#         transformed_data = transform(raw_data)
-#
-#         self.assertEqual(transformed_data[0]['FullName'], 'John Doe')
-#         self.assertEqual(transformed_data[0]['Age'], 38)
-#         self.assertEqual(transformed_data[0]['SalaryBucket'], 'B')
-#
-# if __name__ == '__main__':
-#
-#     unittest.main()
-
-
 import unittest
 from pymongo import MongoClient
-from etl_pipeline import extract_data, transform, load
-from unittest.mock import patch
+from etl_pipeline import extract_data, transform
 
 class TestETL(unittest.TestCase):
 
