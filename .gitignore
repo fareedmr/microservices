@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment variables
+.env
+
+# Docker
+#*.dockerfile
+#docker-compose.override.yml
+#docker-compose*.yml
+#docker-compose*.yaml
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.orig
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Jupyter Notebook files
+.ipynb_checkpoints/

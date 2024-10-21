@@ -1,0 +1,23 @@
+services:
+
+  db_service:
+    image: mongo:latest
+    container_name: db_service
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-data:/data/db
+
+  etl_service:
+    build: .
+    container_name: etl_service
+    volumes:
+      - ./data:/data
+    depends_on:
+      - db_service
+    environment:
+      MONGO_URL: mongodb://db_service:27017/
+
+volumes:
+  db-data:
+
